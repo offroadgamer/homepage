@@ -15,7 +15,8 @@ h1 {
 
 h2 {
     font-weight: 100;
-    font-size: max(min(1.7vw, 30px), 12px);
+    font-size: max(min(1.7vw, 25px), 12px);
+    margin: 10px;
 }
 
 h3 {
@@ -204,7 +205,8 @@ a:hover {
 }
 
 .about-me-text {
-    font-size: 25px;
+    font-size: max(min(1.7vw, 25px), 12px);
+
 }
 
 .projects-title {
@@ -248,8 +250,19 @@ a:hover {
 
 .SoMe-links-item {
     padding: 30px 10px;
+    
 }
 
 .SoMe-links-img {
-    height: 80px;
+    height: max(min(4vw, 80px), 30px);
+}
+
+@media only screen and (max-width: 500px) {
+    .main{
+        width: 100vw;
+    }
+
+    .about-me-box {
+        width: 90vw;
+    }
 }

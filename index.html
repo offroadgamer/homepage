@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
     <title>Ola Fjeld Kristensen</title>
 </head>
 <body id="index" style="color: #ffffff">
@@ -12,12 +13,27 @@
             <div class="navbar-title-box">
                 <h2><a href="index.html" style="color: #ffffff">OLA FJELD KRISTENSEN</a></h2>
             </div>
-            <div class="navbar-navigate-box">
-                <ul class="navbar-navigate-list">
-                    <li class="navbar-navigate-list-item"><h2><a href="about.html" style="color: #ffffff">ABOUT</a></h2></li>
-                    <li class="navbar-navigate-list-item"><h2><a href="projects.html" style="color: #ffffff">PROJECTS</a></h2></li>
-                    <li class="navbar-navigate-list-item"><h2><a href="contact.html" style="color: #ffffff">CONTACT</a></h2></li>
+            <div class="navbar-navigate-box" id="navbar-navigate-box">
+                <button onclick="toggleBurger()">
+                <div class="navbar-navigate-burger">
+                    <div class="burger-item"></div>
+                    <div class="burger-item"></div>
+                    <div class="burger-item"></div>
+                </div>
+                </button>
+            </div>
+            <div id="burger-menu-popup">
+                <ul class="burger-menu-list">
+                    <li class="burger-menu-list-item"><a href="about.html" style="color: #000000">ABOUT</a></li>
+                    <li class="burger-menu-list-item"><a href="projects.html" style="color: #000000">PROJECTS</a></li>
+                    <li class="burger-menu-list-item"><a href="contact.html" style="color: #000000">CONTACT</a></li>
                 </ul>
+            </div>
+            <ul class="navbar-navigate-list">
+                <li class="navbar-navigate-list-item"><h2><a href="about.html" style="color: #ffffff">ABOUT</a></h2></li>
+                <li class="navbar-navigate-list-item"><h2><a href="projects.html" style="color: #ffffff">PROJECTS</a></h2></li>
+                <li class="navbar-navigate-list-item"><h2><a href="contact.html" style="color: #ffffff">CONTACT</a></h2></li>
+            </ul>
             </div>
         </div>
         <div class="navbar-bottom-line" style="background-color: #ffffff"></div>

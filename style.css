@@ -56,6 +56,12 @@ a:hover {
     color: #888888;
 }
 
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+}
+
 #index {
     background-image: url("img/backdrop.jpg");
     background-size: 220vh;
@@ -76,6 +82,39 @@ a:hover {
 .navbar-navigate-box {
     margin: auto;
     margin-right: 3vw;
+    position: absolute;
+    top: min(max(1.3vw, 10px), 2vw);
+    right: 1%;
+    visibility: hidden;
+}
+
+#burger-menu-popup {
+    background-color: #ffffff;
+    height: 80px;
+    width: 110px;
+    visibility: hidden;
+    position: absolute;
+    top: 75px;
+    right: 1%;
+}
+
+.burger-menu-list-item {
+    margin: 0 1.5vw;
+    list-style: none;
+    font-size: 15px;
+}
+
+.navbar-navigate-burger{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.burger-item {
+    height: 7px;
+    width: 50px;
+    margin: 3px;
+    background-color: #ffffff;
 }
 
 .navbar-navigate-list {
@@ -250,7 +289,6 @@ a:hover {
 
 .SoMe-links-item {
     padding: 30px 10px;
-    
 }
 
 .SoMe-links-img {
@@ -264,5 +302,13 @@ a:hover {
 
     .about-me-box {
         width: 90vw;
+    }
+
+    .navbar-navigate-box {
+        visibility: visible;
+    }
+
+    .navbar-navigate-list {
+        visibility: hidden;
     }
 }

@@ -8,30 +8,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: min(4vw, 80px);
+    font-size: max(min(4vw, 60px), 30px);
     font-weight: 100;
     margin: 0;
 }
 
 h2 {
     font-weight: 100;
-    font-size: min(1.7vw, 30px)
+    font-size: max(min(1.7vw, 25px), 12px);
+    margin: 10px;
 }
 
 h3 {
-    font-size: min(1.4vw, 30px);
+    font-size: max(min(1.4vw, 30px), 10px);
     font-weight: 100;
     margin: 0;
 }
 
 h4 {
-    font-size: min(1.2vw, 20px);
+    font-size: max(min(1.2vw, 15px), 10px);
     font-weight: 100;
     margin: 0;
 }
 
+h5 {
+    font-size: 17px;
+    font-weight: 100;
+}
+
+h6 {
+    font-size: 15px;
+}
+
 ul {
-    padding-left: 10px;
+    padding-left: 0px;
 }
 
 span {
@@ -44,6 +54,16 @@ a {
 
 a:hover {
     color: #888888;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+}
+
+#text1 {
+    transition: ease-in 2s;
 }
 
 #index {
@@ -66,6 +86,39 @@ a:hover {
 .navbar-navigate-box {
     margin: auto;
     margin-right: 3vw;
+    position: absolute;
+    top: min(max(1.3vw, 10px), 2vw);
+    right: 1%;
+    visibility: hidden;
+}
+
+#burger-menu-popup {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    height: 80px;
+    width: 110px;
+    visibility: hidden;
+    position: absolute;
+    top: 75px;
+    right: 1%;
+}
+
+.burger-menu-list-item {
+    margin: 0 1.5vw;
+    list-style: none;
+    font-size: 15px;
+}
+
+.navbar-navigate-burger{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.burger-item {
+    height: 7px;
+    width: 50px;
+    margin: 3px;
 }
 
 .navbar-navigate-list {
@@ -110,7 +163,7 @@ a:hover {
 
 .black-box {
     background-color: #000000;
-    height: 700px;
+    height: 300px;
     margin: auto;
 }
 
@@ -139,19 +192,19 @@ a:hover {
 }
 
 .footer-navigate {
-    margin: 0 10vw;
-    width: 12vw;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .footer-made-by {
     text-align: center;
-    margin: 0 10vw;
-    width: 12vw;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .footer-contact {
-    margin: 0 10vw;
-    width: 12vw;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .footer-bottom {
@@ -164,6 +217,7 @@ a:hover {
 .footer-items {
     margin: 0 1vw;
     opacity: 70%;
+    padding: 5px;
 }
 
 .list-item {
@@ -195,7 +249,8 @@ a:hover {
 }
 
 .about-me-text {
-    font-size: 25px;
+    font-size: max(min(1.7vw, 25px), 12px);
+
 }
 
 .projects-title {
@@ -242,5 +297,41 @@ a:hover {
 }
 
 .SoMe-links-img {
-    height: 80px;
+    height: max(min(4vw, 80px), 30px);
+}
+
+@media only screen and (max-width: 500px) {
+    .main{
+        width: 100vw;
+    }
+
+    .about-me-box {
+        width: 90vw;
+    }
+
+    .navbar-navigate-box {
+        visibility: visible;
+    }
+
+    .navbar-navigate-list {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .footer-content{
+        flex-wrap: wrap;
+    }
+
+    .footer-navigate {
+        text-align: center;
+    }
+
+    .footer-contact {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-wrap: wrap;
+    }
 }

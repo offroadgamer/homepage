@@ -1,8 +1,8 @@
 function toggleBurger() {
     let burgerPopup = document.getElementById("burger-menu-popup");
-    if (burgerPopup.style.visibility == "hidden") {
-        burgerPopup.style.visibility = "visible"
+    if (burgerPopup.style.display == "none") {
+        burgerPopup.style.display = "inline"
     } else {
-        burgerPopup.style.visibility = "hidden";
+        burgerPopup.style.display = "none";
     }
 };

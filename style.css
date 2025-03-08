@@ -8,36 +8,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: max(min(4vw, 60px), 30px);
+    font-size: max(min(4vw, 60px), 40px);
     font-weight: 100;
     margin: 0;
 }
 
 h2 {
     font-weight: 100;
-    font-size: max(min(1.7vw, 25px), 12px);
+    font-size: max(min(1.7vw, 25px), 17px);
     margin: 10px;
 }
 
 h3 {
-    font-size: max(min(1.4vw, 30px), 10px);
+    font-size: max(min(1.4vw, 30px), 13px);
     font-weight: 100;
     margin: 0;
 }
 
 h4 {
-    font-size: max(min(1.2vw, 15px), 10px);
+    font-size: max(min(1.2vw, 15px), 13px);
     font-weight: 100;
     margin: 0;
 }
 
 h5 {
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 100;
 }
 
 h6 {
-    font-size: 15px;
+    font-size: 17px;
 }
 
 ul {
@@ -63,6 +63,14 @@ button {
 }
 
 #text1 {
+    transition: ease-in 1.2s;
+}
+
+#text2 {
+    transition: ease-in 1.4s;
+}
+
+#text3 {
     transition: ease-in 2s;
 }
 
@@ -74,22 +82,22 @@ button {
 }
 
 .navbar-content {
+    width: 97%;
+    margin: auto;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .navbar-title-box {
     margin: auto;
-    margin-left: 3vw;
+    margin-left: 1vw;
 }
 
 .navbar-navigate-box {
-    margin: auto;
+    margin: 2vw auto;
     margin-right: 3vw;
-    position: absolute;
-    top: min(max(1.3vw, 10px), 2vw);
-    right: 1%;
-    visibility: hidden;
+    display: none;
 }
 
 #burger-menu-popup {
@@ -97,9 +105,9 @@ button {
     border: 2px solid #000000;
     height: 80px;
     width: 110px;
-    visibility: hidden;
+    display: none;
     position: absolute;
-    top: 75px;
+    top: min(max(69px, 17vw), 75px);
     right: 1%;
 }
 
@@ -300,7 +308,7 @@ button {
     height: max(min(4vw, 80px), 30px);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     .main{
         width: 100vw;
     }
@@ -310,11 +318,15 @@ button {
     }
 
     .navbar-navigate-box {
-        visibility: visible;
+        display: inline;
     }
 
     .navbar-navigate-list {
-        visibility: hidden;
+        display: none;
+    }
+    
+    h1, h2, h3, h4, h5 {
+        font-weight: 600;
     }
 }
 
